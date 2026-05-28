@@ -1,0 +1,43 @@
+package com.example;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+
+public class TestEditOwnerWithValidData extends BaseTest {
+
+
+    @Test
+    public void TestEditOwnerWithValidDataM() {
+
+        String firstName = "Bobo";
+        String lastName = "Black";
+
+        driver.findElement(By.cssSelector("[title='find owners']")).click();
+
+        driver.findElement(By.id("lastName")).sendKeys(lastName);
+
+        driver.findElement(By.cssSelector("[type='submit']")).click();
+
+        driver.findElement(By.linkText("Edit Owner")).click();
+
+        driver.findElement(By.id("firstName")).clear();
+        driver.findElement(By.id("firstName")).sendKeys(firstName);
+
+        driver.findElement(By.cssSelector("[type='submit']")).click();
+
+        try {
+
+            assertEquals(firstName + " " + lastName,
+                    driver.findElement(By.xpath("html[1]/body[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/b[1]"))
+                            .getText());
+
+        } catch (Exception e) {
+
+            fail("Edit Owner Error: " + e.getMessage());
+        }
+
+    }
+
+}

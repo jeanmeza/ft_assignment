@@ -1,0 +1,42 @@
+package com.example;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
+
+public class TestAddOwnerWithEmptyTelephone extends BaseTest {
+
+
+    @Test
+    public void TestAddOwnerWithEmptyTelephoneM() {
+
+        String firstName = "Busra";
+        String lastName = "Ertugrul";
+        String address = "Via Torti";
+        String city = "Genova";
+        String telephone = "";
+
+        // Click find owner button to open find owner screen
+        driver.findElement(By.cssSelector("[title='find owners']")).click();
+
+        // In find owner screen, click add owner button to add new owner
+        driver.findElement(By.linkText("Add Owner")).click();
+
+        // Fill owner informations
+        driver.findElement(By.id("firstName")).sendKeys(firstName);
+        driver.findElement(By.id("lastName")).sendKeys(lastName);
+        driver.findElement(By.id("address")).sendKeys(address);
+        driver.findElement(By.id("city")).sendKeys(city);
+        driver.findElement(By.id("telephone")).sendKeys(telephone);
+
+        // Click add owner button to save new owner
+        driver.findElement(By.cssSelector("[type='submit']")).click();
+
+        // Check if error message is correct or not
+        assertTrue(
+                driver.findElement(By.xpath("html[1]/body[1]/div[1]/div[1]/form[1]/div[1]/div[5]/div[1]/span[2]"))
+                        .getText().contains("must not be empty"));
+
+    }
+
+}
