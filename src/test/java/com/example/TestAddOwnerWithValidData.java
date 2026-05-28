@@ -10,7 +10,7 @@ public class TestAddOwnerWithValidData extends BaseTest {
 
 
     @Test
-    public void TestAddOwnerWithValidDataM() {
+    public void TestAddOwnerWithValidDataM() throws InterruptedException {
 
         // System.setProperty("webdriver.chrome.driver",
         // "C:\\Users\\Busra\\Desktop\\chromedriver_win32\\chromedriver.exe");
@@ -25,9 +25,11 @@ public class TestAddOwnerWithValidData extends BaseTest {
 
         // Click find owner button to open find owner screen
         driver.findElement(By.cssSelector("[title='find owners']")).click();
+        Thread.sleep(UI_WAIT_MS);
 
         // In find owner screen, click add owner button to add new owner
         driver.findElement(By.linkText("Add Owner")).click();
+        Thread.sleep(UI_WAIT_MS);
 
         // Fill owner informations
         driver.findElement(By.id("firstName")).sendKeys(firstName);
@@ -38,6 +40,7 @@ public class TestAddOwnerWithValidData extends BaseTest {
 
         // Click add owner button to save new owner
         driver.findElement(By.cssSelector("[type='submit']")).click();
+        Thread.sleep(UI_WAIT_MS);
 
         // Check if submit button is still on the page or not (Save operation is
         // successful or not)

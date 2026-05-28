@@ -9,24 +9,28 @@ public class TestPetToOwner extends BaseTest {
 
 
     @Test
-    public void TestPetToOwnerM() {
+    public void TestPetToOwnerM() throws InterruptedException {
 
         String petName = "Bird10";
         String lastName = "Black";
 
         driver.findElement(By.cssSelector("[title='find owners']")).click();
+        Thread.sleep(UI_WAIT_MS);
 
         driver.findElement(By.id("lastName")).sendKeys(lastName);
 
         driver.findElement(By.cssSelector("[type='submit']")).click();
+        Thread.sleep(UI_WAIT_MS);
 
         driver.findElement(By.linkText("Add New Pet")).click();
+        Thread.sleep(UI_WAIT_MS);
 
         driver.findElement(By.id("name")).sendKeys(petName);
         driver.findElement(By.id("birthDate")).sendKeys("2015-01-10");
         driver.findElement(By.id("type")).sendKeys("bird");
 
         driver.findElement(By.cssSelector("[type='submit']")).click();
+        Thread.sleep(UI_WAIT_MS);
 
         try {
 

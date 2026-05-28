@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseTest {
+    protected static final long UI_WAIT_MS = 500L;
     protected static WebDriver driver;
 
     @BeforeEach

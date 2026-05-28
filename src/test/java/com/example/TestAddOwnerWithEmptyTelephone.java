@@ -8,7 +8,7 @@ public class TestAddOwnerWithEmptyTelephone extends BaseTest {
 
 
     @Test
-    public void TestAddOwnerWithEmptyTelephoneM() {
+    public void TestAddOwnerWithEmptyTelephoneM() throws InterruptedException {
 
         String firstName = "Busra";
         String lastName = "Ertugrul";
@@ -18,9 +18,11 @@ public class TestAddOwnerWithEmptyTelephone extends BaseTest {
 
         // Click find owner button to open find owner screen
         driver.findElement(By.cssSelector("[title='find owners']")).click();
+        Thread.sleep(UI_WAIT_MS);
 
         // In find owner screen, click add owner button to add new owner
         driver.findElement(By.linkText("Add Owner")).click();
+        Thread.sleep(UI_WAIT_MS);
 
         // Fill owner informations
         driver.findElement(By.id("firstName")).sendKeys(firstName);
@@ -31,6 +33,7 @@ public class TestAddOwnerWithEmptyTelephone extends BaseTest {
 
         // Click add owner button to save new owner
         driver.findElement(By.cssSelector("[type='submit']")).click();
+        Thread.sleep(UI_WAIT_MS);
 
         // Check if error message is correct or not
         assertTrue(
