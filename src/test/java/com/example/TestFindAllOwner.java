@@ -17,7 +17,7 @@ public class TestFindAllOwner extends BaseTest {
         Thread.sleep(UI_WAIT_MS);
 
         // Check if there is a table for owners or not
-        driver.findElement(By.id("vets"));
+        driver.findElement(By.id("owners"));
         assertTrue(true);
 
     }
