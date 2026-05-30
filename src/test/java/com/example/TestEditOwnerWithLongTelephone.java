@@ -33,7 +33,7 @@ public class TestEditOwnerWithLongTelephone extends BaseTest {
 
         try {
 
-            assertEquals("numeric value out of bounds (<10 digits>.<0 digits> expected)",
+            assertEquals("Telephone must be a 10-digit number",
                     driver.findElement(By.className("help-inline")).getText());
 
         } catch (Exception e) {

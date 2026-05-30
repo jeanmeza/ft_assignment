@@ -38,7 +38,7 @@ public class TestAddOwnerWithEmptyTelephone extends BaseTest {
         // Check if error message is correct or not
         assertTrue(
                 driver.findElement(By.xpath("html[1]/body[1]/div[1]/div[1]/form[1]/div[1]/div[5]/div[1]/span[2]"))
-                        .getText().contains("must not be empty"));
+                        .getText().contains("must not be blank"));
 
     }
 

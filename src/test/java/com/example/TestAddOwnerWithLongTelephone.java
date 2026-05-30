@@ -43,7 +43,7 @@ public class TestAddOwnerWithLongTelephone extends BaseTest {
             // Check if error message is correct or not
             assertTrue(
                     driver.findElement(By.xpath("html[1]/body[1]/div[1]/div[1]/form[1]/div[1]/div[5]/div[1]/span[2]"))
-                            .getText().contains("numeric value out of bounds (<10 digits>.<0 digits> expected)"));
+                            .getText().contains("Telephone must be a 10-digit number"));
 
         } catch (Exception e) { // Error Message is not found
 

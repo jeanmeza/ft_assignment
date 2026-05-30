@@ -32,7 +32,7 @@ public class TestEditOwnerEmptyField extends BaseTest {
 
         try {
 
-            assertEquals("must not be empty", driver.findElement(By.className("help-inline")).getText());
+            assertEquals("must not be blank", driver.findElement(By.className("help-inline")).getText());
 
         } catch (Exception e) {
 

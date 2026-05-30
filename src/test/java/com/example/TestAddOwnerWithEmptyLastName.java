@@ -37,7 +37,7 @@ public class TestAddOwnerWithEmptyLastName extends BaseTest {
         Thread.sleep(UI_WAIT_MS);
 
         // Check if error message is correct or not
-        assertEquals("must not be empty",
+        assertEquals("must not be blank",
                 driver.findElement(By.xpath("html[1]/body[1]/div[1]/div[1]/form[1]/div[1]/div[2]/div[1]/span[2]"))
                         .getText());
 
