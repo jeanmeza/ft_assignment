@@ -3,7 +3,6 @@ package com.example;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.fail;
 
 public class TestPetToOwner extends BaseTest {
@@ -33,24 +32,24 @@ public class TestPetToOwner extends BaseTest {
 		driver.findElement(By.cssSelector("[type='submit']")).click();
 		Thread.sleep(UI_WAIT_MS);
 
-        try {
+		try {
 
-            driver.findElement(By.xpath("//button[text()='Add Pet']"));
+			driver.findElement(By.xpath("//button[text()='Add Pet']"));
 
-            fail("You can not add  new pet with existed pet name ! ");
+			fail("You can not add  new pet with existed pet name ! ");
 
-        } catch (Exception e) {
+		} catch (Exception e) {
 
-            try {
+			try {
 
 				// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
 
-            } catch (Exception ex) {
+			} catch (Exception ex) {
 
-                fail("New Pet could not added !: " + e.getMessage());
+				fail("New Pet could not added !: " + e.getMessage());
 
-            }
-        }
-    }
+			}
+		}
+	}
 
 }

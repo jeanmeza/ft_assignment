@@ -6,18 +6,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class BaseTest {
-    protected static final long UI_WAIT_MS = 500L;
-    protected static WebDriver driver;
+	protected static final long UI_WAIT_MS = 500L;
+	protected static WebDriver driver;
 
-    @BeforeEach
-    void setUpBeforeClass() throws Exception {
-        driver = new ChromeDriver();
-        driver.get("http://localhost:8080/");
-    }
+	@BeforeEach
+	void setUpBeforeClass() throws Exception {
+		driver = new ChromeDriver();
+		driver.get("http://localhost:8080/");
+	}
 
-    @AfterEach
-    void tearDown() {
-        driver.quit();
-        driver = null;
-    }
+	@AfterEach
+	void tearDown() {
+		driver.quit();
+		driver = null;
+	}
 }
