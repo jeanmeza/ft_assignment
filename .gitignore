@@ -51,3 +51,7 @@ allure-report/
 .env
 .env.*
 *.local
+
+# Microsoft Office temporary files
+~$*.xlsx
+~$*.docx
