@@ -1,43 +1,43 @@
 package com.example;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.fail;
-
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
 public class TestEditOwnerEmptyField extends BaseTest {
 
 
-    @Test
-    public void TestEditOwnerEmptyFieldM() throws InterruptedException {
+	@Test
+	public void TestEditOwnerEmptyFieldM() throws InterruptedException {
 
-        String lastName = "Black";
+		String lastName = "Black";
 
-        driver.findElement(By.cssSelector("[title='find owners']")).click();
-        Thread.sleep(UI_WAIT_MS);
+		driver.findElement(By.cssSelector("[title='find owners']")).click();
+		Thread.sleep(UI_WAIT_MS);
 
-        driver.findElement(By.id("lastName")).sendKeys(lastName);
+		driver.findElement(By.id("lastName")).sendKeys(lastName);
 
-        driver.findElement(By.cssSelector("[type='submit']")).click();
-        Thread.sleep(UI_WAIT_MS);
+		driver.findElement(By.cssSelector("[type='submit']")).click();
+		Thread.sleep(UI_WAIT_MS);
 
-        driver.findElement(By.linkText("Edit Owner")).click();
-        Thread.sleep(UI_WAIT_MS);
+		driver.findElement(By.linkText("Edit Owner")).click();
+		Thread.sleep(UI_WAIT_MS);
 
-        driver.findElement(By.id("city")).clear();
+		driver.findElement(By.id("city")).clear();
 
-        driver.findElement(By.cssSelector("[type='submit']")).click();
-        Thread.sleep(UI_WAIT_MS);
+		driver.findElement(By.cssSelector("[type='submit']")).click();
+		Thread.sleep(UI_WAIT_MS);
 
-        try {
+		try {
 
-            assertEquals("must not be blank", driver.findElement(By.className("help-inline")).getText());
+			assertEquals("must not be blank", driver.findElement(By.className("help-inline")).getText());
 
-        } catch (Exception e) {
+		} catch (Exception e) {
 
-            fail("City must not be empty error message could not found !: " + e.getMessage());
-        }
-    }
+			fail("City must not be empty error message could not found !: " + e.getMessage());
+		}
+	}
 
 }
