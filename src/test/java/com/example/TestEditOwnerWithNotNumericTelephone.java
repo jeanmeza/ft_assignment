@@ -35,8 +35,7 @@ public class TestEditOwnerWithNotNumericTelephone extends BaseTest {
 		try {
 
 			// The telephone validation message should say "Telephone must be a 10-digit number" for a non-numeric edited value.
-			// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
-
+			assertEquals("Telephone must be a 10-digit number", driver.findElement(By.className("help-inline")).getText());
 		} catch (Exception e) {
 
 			fail("Telephone control does not work !: " + e.getMessage());

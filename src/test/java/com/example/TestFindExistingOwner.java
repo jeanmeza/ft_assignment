@@ -18,7 +18,7 @@ public class TestFindExistingOwner extends BaseTest {
 		Thread.sleep(UI_WAIT_MS);
 
 		// The first owner result should contain the searched last name.
-		// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
+		assertTrue(driver.findElement(By.cssSelector("td b")).getText().contains(lastName));
 	}
 
 }

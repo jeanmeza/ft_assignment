@@ -38,8 +38,7 @@ public class TestAddOwnerWithEmptyFirstName extends BaseTest {
 		Thread.sleep(UI_WAIT_MS);
 
 		// The first name validation message should say "must not be blank" after submitting an empty first name.
-		// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
-
+		assertEquals("must not be blank", driver.findElement(By.className("help-inline")).getText());
 	}
 
 }

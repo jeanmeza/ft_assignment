@@ -33,8 +33,7 @@ public class TestEditOwnerEmptyField extends BaseTest {
 		try {
 
 			// The city validation message should say "must not be blank" after clearing and submitting the city field.
-			// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
-
+			assertEquals("must not be blank", driver.findElement(By.className("help-inline")).getText());
 		} catch (Exception e) {
 
 			fail("City must not be empty error message could not found !: " + e.getMessage());

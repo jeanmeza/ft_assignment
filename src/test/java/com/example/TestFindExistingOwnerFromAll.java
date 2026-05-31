@@ -19,7 +19,7 @@ public class TestFindExistingOwnerFromAll extends BaseTest {
 		Thread.sleep(UI_WAIT_MS);
 
 		// The owner details page should show the selected owner name exactly as "George Franklin".
-		// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
+		assertEquals(owner, driver.findElement(By.cssSelector("table.table-striped td b")).getText());
 	}
 
 }

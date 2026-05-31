@@ -44,7 +44,7 @@ public class TestPetToOwner extends BaseTest {
 			try {
 
 				// The newly added pet should appear in the owner details with the exact pet name.
-				// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
+				assertEquals(petName, driver.findElement(By.xpath("//ddtext()='" + petName + "'")).getText());
 
 			} catch (Exception ex) {
 

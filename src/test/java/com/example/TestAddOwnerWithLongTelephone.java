@@ -41,8 +41,7 @@ public class TestAddOwnerWithLongTelephone extends BaseTest {
 		try {
 
 			// The telephone validation message should include "Telephone must be a 10-digit number" for an overlong value.
-			// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
-
+			assertTrue(driver.findElement(By.className("help-inline")).getText().contains("Telephone must be a 10-digit number"));
 		} catch (Exception e) { // Error Message is not found
 
 			fail("Numeric value out of bounds (<10 digits>.<0 digits> expected) error message could not found(For Telephone): "

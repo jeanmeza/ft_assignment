@@ -35,8 +35,7 @@ public class TestEditOwnerWithValidData extends BaseTest {
 		try {
 
 			// The owner name shown in the owner information table should match firstName + " " + lastName after editing.
-			// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
-
+			assertEquals(firstName + " " + lastName, driver.findElement(By.cssSelector("table.table-striped td b")).getText());
 		} catch (Exception e) {
 
 			fail("Edit Owner Error: " + e.getMessage());

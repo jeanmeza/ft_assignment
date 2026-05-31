@@ -21,8 +21,7 @@ public class TestFindAllOwner extends BaseTest {
 		driver.findElement(By.id("owners"));
 
 		// The owners search result page should contain the owners table with id "owners".
-		// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
-
+		assertTrue(driver.findElement(By.id("owners")).isDisplayed());
 	}
 
 }

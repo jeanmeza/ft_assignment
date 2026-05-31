@@ -18,7 +18,7 @@ public class TestFindNotExistingOwner extends BaseTest {
 		Thread.sleep(UI_WAIT_MS);
 
 		// The search form should display the "has not been found" message when no owner matches the last name.
-		// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
+		assertEquals("has not been found", driver.findElement(By.className("help-inline")).getText());
 	}
 
 }

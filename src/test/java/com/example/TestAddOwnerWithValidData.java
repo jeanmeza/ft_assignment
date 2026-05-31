@@ -56,13 +56,13 @@ public class TestAddOwnerWithValidData extends BaseTest {
 
 			// Check if values are correctly saved or not
 			// The owner name shown in the owner information table should match firstName + " " + lastName.
-			// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
+			assertEquals(firstName + " " + lastName, driver.findElement(By.xpath("//th[text()='Name']/following-sibling::td")).getText());
 			// The address shown in the owner information table should match the submitted address.
-			// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
+			assertEquals(address, driver.findElement(By.xpath("//th[text()='Address']/following-sibling::td")).getText());
 			// The city shown in the owner information table should match the submitted city.
-			// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
+			assertEquals(city, driver.findElement(By.xpath("//th[text()='City']/following-sibling::td")).getText());
 			// The telephone shown in the owner information table should match the submitted telephone.
-			// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
+			assertEquals(telephone, driver.findElement(By.xpath("//th[text()='Telephone']/following-sibling::td")).getText());
 		}
 
 	}
