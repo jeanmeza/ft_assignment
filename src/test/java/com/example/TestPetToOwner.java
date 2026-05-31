@@ -42,7 +42,7 @@ public class TestPetToOwner extends BaseTest {
 
 			try {
 
-				// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
+				org.junit.jupiter.api.Assertions.assertTrue(driver.getPageSource().contains(petName));
 
 			} catch (Exception ex) {
 

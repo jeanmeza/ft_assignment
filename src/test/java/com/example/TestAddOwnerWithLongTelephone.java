@@ -38,7 +38,7 @@ public class TestAddOwnerWithLongTelephone extends BaseTest {
 
 		try {
 
-			// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
+			org.junit.jupiter.api.Assertions.assertTrue(driver.findElement(By.cssSelector("[type='submit']")).isDisplayed());
 
 		} catch (Exception e) {
 

@@ -35,7 +35,7 @@ public class TestAddOwnerWithEmptyLastName extends BaseTest {
 		driver.findElement(By.cssSelector("[type='submit']")).click();
 		Thread.sleep(UI_WAIT_MS);
 
-		// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
+		org.junit.jupiter.api.Assertions.assertTrue(driver.findElement(By.cssSelector("[type='submit']")).isDisplayed());
 
 	}
 
