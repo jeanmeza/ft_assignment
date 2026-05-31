@@ -34,9 +34,8 @@ public class TestEditOwnerWithValidData extends BaseTest {
 
 		try {
 
-			assertEquals(firstName + " " + lastName,
-				driver.findElement(By.xpath("html[1]/body[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/b[1]"))
-					.getText());
+			// The owner name shown in the owner information table should match firstName + " " + lastName after editing.
+			// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
 
 		} catch (Exception e) {
 

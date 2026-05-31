@@ -36,10 +36,8 @@ public class TestAddOwnerWithEmptyCity extends BaseTest {
 		driver.findElement(By.cssSelector("[type='submit']")).click();
 		Thread.sleep(UI_WAIT_MS);
 
-		// Check if error message is correct or not
-		assertEquals("must not be blank",
-			driver.findElement(By.xpath("html[1]/body[1]/div[1]/div[1]/form[1]/div[1]/div[4]/div[1]/span[2]"))
-				.getText());
+		// The city validation message should say "must not be blank" after submitting an empty city.
+		// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
 
 	}
 

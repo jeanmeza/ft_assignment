@@ -17,8 +17,9 @@ public class TestFindExistingOwnerFromAll extends BaseTest {
 		Thread.sleep(UI_WAIT_MS);
 		driver.findElement(By.linkText("George Franklin")).click();
 		Thread.sleep(UI_WAIT_MS);
-		// Check if the first item of the list has wanted lastname
-		assertEquals(owner, driver.findElement(By.xpath("//b[contains(text(),'George Franklin')]")).getText());
+
+		// The owner details page should show the selected owner name exactly as "George Franklin".
+		// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
 	}
 
 }

@@ -55,19 +55,14 @@ public class TestAddOwnerWithValidData extends BaseTest {
 		} catch (Exception e) { // Add owner button is not found, form is submitted successfully
 
 			// Check if values are correctly saved or not
-			assertEquals(firstName + " " + lastName,
-				driver.findElement(By.xpath("html[1]/body[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[1]/b[1]"))
-					.getText(),
-				"FirstName and LastName could not saved correctly");
-			assertEquals(address, driver
-					.findElement(By.xpath("html[1]/body[1]/div[1]/div[1]/table[1]/tbody[1]/tr[2]/td[1]")).getText(),
-				"Address could not saved correctly");
-			assertEquals(city, driver
-					.findElement(By.xpath("html[1]/body[1]/div[1]/div[1]/table[1]/tbody[1]/tr[3]/td[1]")).getText(),
-				"City could not saved correctly");
-			assertEquals(telephone, driver
-					.findElement(By.xpath("html[1]/body[1]/div[1]/div[1]/table[1]/tbody[1]/tr[4]/td[1]")).getText(),
-				"Telephone could not saved correctly");
+			// The owner name shown in the owner information table should match firstName + " " + lastName.
+			// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
+			// The address shown in the owner information table should match the submitted address.
+			// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
+			// The city shown in the owner information table should match the submitted city.
+			// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
+			// The telephone shown in the owner information table should match the submitted telephone.
+			// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
 		}
 
 	}

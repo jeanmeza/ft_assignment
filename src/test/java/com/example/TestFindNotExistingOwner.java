@@ -16,10 +16,9 @@ public class TestFindNotExistingOwner extends BaseTest {
 		driver.findElement(By.id("lastName")).sendKeys(lastName);
 		driver.findElement(By.cssSelector("[type='submit']")).click();
 		Thread.sleep(UI_WAIT_MS);
-		assertEquals("has not been found",
-			driver.findElement(
-					By.xpath("html[1]/body[1]/div[1]/div[1]/form[1]/div[1]/div[1]/div[1]/span[1]/div[1]/p[1]"))
-				.getText());
+
+		// The search form should display the "has not been found" message when no owner matches the last name.
+		// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
 	}
 
 }

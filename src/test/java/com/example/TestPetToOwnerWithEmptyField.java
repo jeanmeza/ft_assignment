@@ -32,7 +32,8 @@ public class TestPetToOwnerWithEmptyField extends BaseTest {
 
 			Thread.sleep(1000);
 
-			assertEquals(2, driver.findElements(By.className("help-inline")).size());
+			// Submitting a new pet with required fields empty should show exactly two validation messages.
+			// Insert here a JUnit 5 assertion that correctly reflects the purpose of the test.
 
 		} catch (Exception e) {
 
